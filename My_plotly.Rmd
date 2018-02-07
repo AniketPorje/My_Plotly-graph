@@ -1,0 +1,34 @@
+---
+title: "Plotly_graph"
+author: "Aniket Porje"
+date: "February 8, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Plotly Graph
+
+This is the graph drown by plotly corelation relation.
+
+
+```{r, echo=FALSE}
+library(plotly)
+
+
+p <- plot_ly(data = iris, x = ~Sepal.Length, y = ~Petal.Length)
+p
+```
+
+##3D representation
+
+This graph represent relation between Sepal.Length,Sepal.Width,Petal.Length
+
+```{r, echo=FALSE}
+q<-plot_ly(x=iris$Sepal.Length,y=iris$Sepal.Width,z=iris$Petal.Length,type="scatter3d",mode='markers',size=iris$Petal.Width,color=iris$Species)
+q
+
+```
+
